@@ -1,0 +1,9 @@
+{% extends 'layouts/app.twig' %}
+{% block content %}
+    {% include 'layouts/flash.twig' %}
+    <h1>Welcome to Slim 3 - Skeleton</h1>{{data}}
+    <form action="{{path_for('test.csrf')}}" method="post">
+        <button type="submit">Test CSRF</button>
+        {{csrf_field() | raw }}
+    </form>
+{% endblock %}
